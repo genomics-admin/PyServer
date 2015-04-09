@@ -1,0 +1,426 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>Sampark: VM Search Page</title>
+
+	<link rel="stylesheet" type="text/css" media="screen" href="layout.css">
+	<style>
+	table, td, th {
+		border: 1px solid black;
+	}
+
+	th {
+		background-color: green;
+		color: white;
+		text-align: middle;
+		height: 50px;
+	}
+	</style>
+	
+	
+    <style type="text/css">
+      body { font-size: 80%; font-family: 'Lucida Grande', Verdana, Arial, Sans-Serif; }
+      ul#tabs { list-style-type: none; margin: 30px 0 0 0; padding: 0 0 0.3em 0; }
+      ul#tabs li { display: inline; }
+      ul#tabs li a { color: #42454a; background-color: #dedbde; border: 1px solid #c9c3ba; border-bottom: none; padding: 0.3em; text-decoration: none; }
+      ul#tabs li a:hover { background-color: #f1f0ee; }
+      ul#tabs li a.selected { color: #000; background-color: #f1f0ee; font-weight: bold; padding: 0.7em 0.3em 0.38em 0.3em; }
+      div.tabContent { border: 1px solid #c9c3ba; padding: 0.5em; background-color: #f1f0ee; }
+      div.tabContent.hide { display: none; }
+    </style>
+
+    <script type="text/javascript">
+    //<![CDATA[
+
+    var tabLinks = new Array();
+    var contentDivs = new Array();
+
+    function init() {
+
+      // Grab the tab links and content divs from the page
+      var tabListItems = document.getElementById('tabs').childNodes;
+      for ( var i = 0; i < tabListItems.length; i++ ) {
+        if ( tabListItems[i].nodeName == "LI" ) {
+          var tabLink = getFirstChildWithTagName( tabListItems[i], 'A' );
+          var id = getHash( tabLink.getAttribute('href') );
+          tabLinks[id] = tabLink;
+          contentDivs[id] = document.getElementById( id );
+        }
+      }
+
+      // Assign onclick events to the tab links, and
+      // highlight the first tab
+      var i = 0;
+
+      for ( var id in tabLinks ) {
+        tabLinks[id].onclick = showTab;
+        tabLinks[id].onfocus = function() { this.blur() };
+        if ( i == 0 ) tabLinks[id].className = 'selected';
+        i++;
+      }
+
+      // Hide all content divs except the first
+      var i = 0;
+
+      for ( var id in contentDivs ) {
+        if ( i != 0 ) contentDivs[id].className = 'tabContent hide';
+        i++;
+      }
+    }
+
+    function showTab() {
+      var selectedId = getHash( this.getAttribute('href') );
+
+      // Highlight the selected tab, and dim all others.
+      // Also show the selected content div, and hide all others.
+      for ( var id in contentDivs ) {
+        if ( id == selectedId ) {
+          tabLinks[id].className = 'selected';
+          contentDivs[id].className = 'tabContent';
+        } else {
+          tabLinks[id].className = '';
+          contentDivs[id].className = 'tabContent hide';
+        }
+      }
+
+      // Stop the browser following the link
+      return false;
+    }
+
+    function getFirstChildWithTagName( element, tagName ) {
+      for ( var i = 0; i < element.childNodes.length; i++ ) {
+        if ( element.childNodes[i].nodeName == tagName ) return element.childNodes[i];
+      }
+    }
+
+    function getHash( url ) {
+      var hashPos = url.lastIndexOf ( '#' );
+      return url.substring( hashPos + 1 );
+    }
+
+    //]]>
+    </script>
+  </head>
+  <body onload="init()">
+  <div class="wrapper">
+    <h1>Sampark: VM Search 2.5</h1>
+
+	<div style="text-align: center;"><a href="http://www.monsanto.com" title="Monsanto logo" style="margin-top:2px;margin-right:2px;margin-bottom:2px;margin-left:2px;" rel="" target="_blank"><img src="http://www.monsanto.com/SharedMonsantoLogos/media-kit/monsanto.png" alt="Monsanto Logo" style="border: 7px solid rgb(255, 255, 255); -webkit-box-shadow: rgba(0, 0, 0, 0.498039) 0px 15px 10px -10px, rgba(0, 0, 0, 0.298039) 0px 1px 4px; box-shadow: rgba(0, 0, 0, 0.498039) 0px 15px 10px -10px, rgba(0, 0, 0, 0.298039) 0px 1px 4px; border-top-left-radius: 7px; border-top-right-radius: 7px; border-bottom-right-radius: 7px; border-bottom-left-radius: 7px; float: none; margin: 2px; width: 600px; height: 201px;" /></a></div>
+	
+	<div><br />
+	</div>
+
+    <ul id="tabs">
+      <li><a href="#VM">VM Search</a></li>
+      <li><a href="#ESX">Physical ESX Host Search</a></li>
+      <li><a href="#DS">Data Storage Search</a></li>
+    </ul>
+
+    <div class="tabContent" id="VM">
+      <h2>VM Search</h2>
+      <div>
+			<form method="POST" action="/send1" style="text-align: center;" id="clickMeId">  Search: 
+			<input type="text" name="fsearch" id="clickMeId1"/>  
+			<input type="submit" value="Search" onclick="toggleDisplay('loading', 'clickMeId')"/>
+			</form>
+			<img id="loading" src="http://sitebasin.com/sites/all/modules/custom/seed_sbase/img/loading-squares.gif" style="display:none;" alt="Please Wait..." height="40" width="40" align="right"/>
+			<div>&nbsp;</div>
+
+			<script>
+			function toggleDisplay (toBlock, toNone) {
+				document.getElementById(toBlock).style.display = 'block';
+				document.getElementById(toNone).style.display = 'none';
+			}
+			</script>
+      </div>
+	  
+	  
+		<div><span style="font-weight: bold;">&nbsp;Data Grid:</span></div>
+		<div>
+			<table style="border-collapse:collapse;width:100%;">
+				<tbody>
+					<tr>
+						<th> VCNAME </th> 
+										<th> VMID </th> 
+										<th> NAME </th> 
+										<th> DATASTORE_NAME </th> 
+										<th> CAPACITYGB </th> 
+										<th> FREEGB </th> 
+										<th> VMGROUPID </th> 
+										<th> ESH_HOSTNAME </th> 
+										<th> CONFIGFILENAME </th> 
+										<th> VMUNIQUEID </th> 
+										<th> RESOURCE_GROUP_ID </th> 
+										<th> MEM_SIZE_MB </th> 
+										<th> NUM_VCPU </th> 
+										<th> BOOTTIME </th> 
+										<th> POWER_STATE </th> 
+										<th> CLUSTER_NAME </th> 
+										<th> VDATACENTER </th> 
+										<th> GUESTOS </th> 
+										<th> GUEST_STATE </th> 
+										<th> MEM_RESV </th> 
+										<th> MEM_OVHD </th> 
+										<th> CPU_RESERVATION </th> 
+										<th> DNS_NAME </th> 
+										<th> IP_ADDRESS </th> 
+										<th> VMMWARE_TOOL </th> 
+										<th> TOOLS_VERSION </th> 
+										<th> NUM_NIC </th> 
+										<th> NUM_DISK </th> 
+										<th> TEMPLATE </th> 
+										<th> DESCRIPTION </th> 
+										<th> ANNOTATION </th> 
+										<th> AGG_COMMDISKMB </th> 
+										<th> AGG_UNCOMMDISKMB </th> 
+										<th> AGG_UNSHARDISKMB </th> 
+										<th> STORUPDTIME </th> 
+					</tr>
+					<tr>
+						<td><br />
+							</td>
+						<td><br />
+							</td>
+						<td><br />
+							</td>
+						<td><br />
+							</td>
+						<td><br />
+							</td>
+						<td><br />
+							</td>
+						<td><br />
+							</td>
+						<td><br />
+							</td>
+						<td><br />
+							</td>
+						<td><br />
+							</td>
+						<td><br />
+							</td>
+						<td><br />
+							</td>
+						<td><br />
+							</td>
+						<td><br />
+							</td>
+						<td><br />
+							</td>
+						<td><br />
+							</td>
+						<td><br />
+							</td>
+						<td><br />
+							</td>
+						<td><br />
+							</td>
+						<td><br />
+							</td>
+						<td><br />
+							</td>
+						<td><br />
+							</td>
+						<td><br />
+							</td>
+						<td><br />
+							</td>
+						<td><br />
+							</td>
+						<td><br />
+							</td>
+						<td><br />
+							</td>
+						<td><br />
+							</td>
+						<td><br />
+							</td>
+						<td><br />
+							</td>
+						<td><br />
+							</td>
+						<td><br />
+							</td>
+						<td><br />
+							</td>
+						<td><br />
+							</td>
+						<td><br />
+							</td>
+					</tr>
+				</tbody>
+			</table><br />
+			</div>
+
+	  
+	  
+    </div>
+
+    <div class="tabContent" id="ESX">
+      <h2>Physical ESX Host Search</h2>
+      <div>
+			<form method="POST" action="/send2" style="text-align: center;" id="clickMeId">  Search: 
+			<input type="text" name="fsearch" id="clickMeId1"/>  
+			<input type="submit" value="Search" onclick="toggleDisplay('loading', 'clickMeId')"/>
+			</form>
+			<img id="loading" src="http://cdn.rsvlts.com/wp-content/uploads/2013/12/07-07.gif" style="display:none;" alt="Please Wait..." height="40" width="40" align="right"/>
+			<div>&nbsp;</div>
+
+			<script>
+			function toggleDisplay (toBlock, toNone) {
+				document.getElementById(toBlock).style.display = 'block';
+				document.getElementById(toNone).style.display = 'none';
+			}
+			</script>
+      </div>
+	  
+	  
+		<div><span style="font-weight: bold;">&nbsp;Data Grid:</span></div>
+		<div>
+			<table style="border-collapse:collapse;width:100%;">
+				<tbody>
+					<tr>
+						<th> VCNAME </th> 
+		                                <th> HOST_NAME </th> 
+		                                <th> HOST_MODEL </th> 
+		                                <th> CPU_MODEL </th> 
+		                                <th> SERVER_UP_TIME </th>  
+		                                <th> CPU_COUNT </th> 
+		                                <th> CPU_CORE_COUNT </th> 
+		                                <th> CPU_HZ </th> 
+		                                <th> CPU_THREAD_COUNT </th> 
+		                                <th> VM_VCPU_ACTIVE </th> 
+		                                <th> MEM_SIZE </th> 
+		                                <th> THREAD_OVERCommit </th> 
+		                                <th> CORE_OVERCommit </th> 
+		                                <th> MEM_SIZE_MB </th> 
+		                                <th> VM_MEM_SIZE_MB </th> 
+		                                <th> MEM_OVERCommit </th> 
+		                                <th> VM_MEMORY_OVERHEAD </th> 
+		                                <th> VM_MEM_SIZE_MB_POTENTIAL </th> 
+		                                <th> VM_VCPU_ALLOC_POTENTIAL </th> 
+		                                <th> NIC_COUNT </th> 
+		                                <th> HBA_COUNT </th> 
+		                                <th> VM_TOOLS_OK </th> 
+		                                <th> VM_TOOLS_OUT_OF_DATE </th> 
+		                                <th> VM_VCPU_ALLOC </th>
+					</tr>
+					<tr>
+						<td><br />
+							</td>
+						<td><br />
+							</td>
+						<td><br />
+							</td>
+						<td><br />
+							</td>
+						<td><br />
+							</td>
+						<td><br />
+							</td>
+						<td><br />
+							</td>
+						<td><br />
+							</td>
+						<td><br />
+							</td>
+						<td><br />
+							</td>
+						<td><br />
+							</td>
+						<td><br />
+							</td>
+						<td><br />
+							</td>
+						<td><br />
+							</td>
+						<td><br />
+							</td>
+						<td><br />
+							</td>
+						<td><br />
+							</td>
+						<td><br />
+							</td>
+						<td><br />
+							</td>
+						<td><br />
+							</td>
+						<td><br />
+							</td>
+						<td><br />
+							</td>
+						<td><br />
+							</td>
+						<td><br />
+							</td>				
+					</tr>
+				</tbody>
+			</table><br />
+			</div>
+    </div>
+
+    <div class="tabContent" id="DS">
+      <h2>Data Storage Search</h2>
+      <div>
+			<form method="POST" action="/send3" style="text-align: center;" id="clickMeId">  Search: 
+			<input type="text" name="fsearch" id="clickMeId1"/>  
+			<input type="submit" value="Search" onclick="toggleDisplay('loading', 'clickMeId')"/>
+			</form>
+			<img id="loading" src="http://media.giphy.com/media/XDbwLzdld5ADS/giphy.gif" style="display:none;" alt="Please Wait..." height="40" width="40" align="right"/>
+			<div>&nbsp;</div>
+
+			<script>
+			function toggleDisplay (toBlock, toNone) {
+				document.getElementById(toBlock).style.display = 'block';
+				document.getElementById(toNone).style.display = 'none';
+			}
+			</script>
+      </div>
+	  
+	  
+		<div><span style="font-weight: bold;">&nbsp;Data Grid:</span></div>
+		<div>
+			<table style="border-collapse:collapse;width:100%;">
+				<tbody>
+					<tr>
+						<th> NAME </th> 
+                                		<th> DS_NAME </th> 
+                                		<th> ACCESSIBLE </th> 
+                                		<th> MOUNT_MODE </th> 
+                                		<th> MOUNTED </th> 
+                                		<th> Total_GB </th> 
+                                		<th> Free_GB </th> 
+					</tr>
+					<tr>
+						<td><br />
+							</td>
+						<td><br />
+							</td>
+						<td><br />
+							</td>
+						<td><br />
+							</td>
+						<td><br />
+							</td>
+						<td><br />
+							</td>
+						<td><br />
+							</td>
+					</tr>
+				</tbody>
+			</table><br />
+			</div>
+    </div>	
+	
+	<div class="push"></div>
+
+	</div>
+
+	<div class="footer">
+		<p class="copyright"><a href="http://www.monsanto.com/" title="Owner">Copyright &copy; Monsanto &mdash; <a href="http://mysites.monsanto.com/Person.aspx?accountname=ASIA%2DPACIFIC%5CSLAIK" title="Developer">Developed by: Sandeep kumar Laik</a> and <a href="http://mysites.monsanto.com/Person.aspx?accountname=ASIA%2DPACIFIC%5CSSKUMA5" title="Designer">Designed by: Santhosh Kumar N</a></p>
+	</div>
+  </body>
+</html>

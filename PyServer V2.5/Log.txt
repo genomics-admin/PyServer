@@ -1,0 +1,717 @@
+Started httpserver on port  8084
+Started httpserver on port  8084
+Started httpserver on port  8084
+Started httpserver on port  8084
+Started httpserver on port  8084
+Started httpserver on port  8084
+Started httpserver on port  8084
+================================
+Requested by : 10.208.95.141
+TimeStamp : 2015/02/05 22:55:11
+FieldStorage(None, None, [MiniFieldStorage('fsearch', 'cblinux01')])
+Search Value: cblinux01
+cblinux01
+Serching for cblinux01
+83 CBlinux01 vmware_stpcx20_438_CB 26 0
+83 CBlinux01 vmware_stpcx20_437_CB 26 0
+------------------
+83 CBlinux01 vmware_stpcx20_438_CB 26 0
+83 CBlinux01 vmware_stpcx20_437_CB 26 0
+================================
+Requested by : 10.210.9.15
+TimeStamp : 2015/02/06 01:04:45
+FieldStorage(None, None, [MiniFieldStorage('fsearch', 'like clinux01, win2k3')])
+Search Value: like clinux01, win2k3
+like clinux01
+Serching for like clinux01
+Error
+------------------
+Serching for  win2k3
+Error
+------------------
+================================
+Requested by : 10.210.9.15
+TimeStamp : 2015/02/06 01:04:59
+FieldStorage(None, None, [MiniFieldStorage('fsearch', 'win2k3')])
+Search Value: win2k3
+win2k3
+Serching for win2k3
+69 win2k3 vmware_stpcx20_437_CB 26 0
+69 win2k3 vmware_stpcx20_436_CB 26 0
+------------------
+69 win2k3 vmware_stpcx20_437_CB 26 0
+69 win2k3 vmware_stpcx20_436_CB 26 0
+================================
+Requested by : 10.210.9.15
+TimeStamp : 2015/02/06 01:20:15
+FieldStorage(None, None, [MiniFieldStorage('fsearch', 'Win2k3')])
+Search Value: Win2k3
+Win2k3
+Serching for Win2k3
+69 win2k3 vmware_stpcx20_437_CB 26 0
+69 win2k3 vmware_stpcx20_436_CB 26 0
+------------------
+69 win2k3 vmware_stpcx20_437_CB 26 0
+69 win2k3 vmware_stpcx20_436_CB 26 0
+================================
+Requested by : 10.210.1.49
+TimeStamp : 2015/02/08 22:11:48
+FieldStorage(None, None, [MiniFieldStorage('fsearch', 'win2k3')])
+Search Value: win2k3
+win2k3
+Serching for win2k3
+Traceback (most recent call last):
+  File "E:\PyServer\PyServer\Py-Server.py", line 282, in do_POST
+    rows = PDC.getData(str(rValue))
+  File "E:\PyServer\PyServer\PyDBConn.py", line 105, in getData
+    cursor.execute(query)
+Error: ('01000', '[01000] [Microsoft][ODBC SQL Server Driver][DBNETLIB]ConnectionWrite (send()). (10054) (SQLExecDirectW); [08S01] [Microsoft][ODBC SQL Server Driver][DBNETLIB]General network error. Check your network documentation. (11)')
+
+================================
+Requested by : 10.210.1.49
+TimeStamp : 2015/02/08 22:11:55
+FieldStorage(None, None, [MiniFieldStorage('fsearch', 'win2k3')])
+Search Value: win2k3
+win2k3
+Serching for win2k3
+Traceback (most recent call last):
+  File "E:\PyServer\PyServer\Py-Server.py", line 282, in do_POST
+    rows = PDC.getData(str(rValue))
+  File "E:\PyServer\PyServer\PyDBConn.py", line 105, in getData
+    cursor.execute(query)
+Error: ('08S01', '[08S01] [Microsoft][ODBC SQL Server Driver]Communication link failure (0) (SQLExecDirectW)')
+
+================================
+Requested by : 10.210.1.49
+TimeStamp : 2015/02/08 22:12:04
+FieldStorage(None, None, [MiniFieldStorage('fsearch', 'cblinux01')])
+Search Value: cblinux01
+cblinux01
+Serching for cblinux01
+Traceback (most recent call last):
+  File "E:\PyServer\PyServer\Py-Server.py", line 282, in do_POST
+    rows = PDC.getData(str(rValue))
+  File "E:\PyServer\PyServer\PyDBConn.py", line 105, in getData
+    cursor.execute(query)
+Error: ('08S01', '[08S01] [Microsoft][ODBC SQL Server Driver]Communication link failure (0) (SQLExecDirectW)')
+
+================================
+Requested by : 10.210.1.49
+TimeStamp : 2015/02/08 22:12:16
+FieldStorage(None, None, [MiniFieldStorage('fsearch', 'cblinux01')])
+Search Value: cblinux01
+cblinux01
+Serching for cblinux01
+Traceback (most recent call last):
+  File "E:\PyServer\PyServer\Py-Server.py", line 282, in do_POST
+    rows = PDC.getData(str(rValue))
+  File "E:\PyServer\PyServer\PyDBConn.py", line 105, in getData
+    cursor.execute(query)
+Error: ('08S01', '[08S01] [Microsoft][ODBC SQL Server Driver]Communication link failure (0) (SQLExecDirectW)')
+
+================================
+Requested by : 10.210.1.49
+TimeStamp : 2015/02/08 22:12:23
+FieldStorage(None, None, [MiniFieldStorage('fsearch', 'cblinux01')])
+Search Value: cblinux01
+cblinux01
+Serching for cblinux01
+Traceback (most recent call last):
+  File "E:\PySeStarted httpserver on port  8084
+================================
+Requested by : 10.210.9.15
+TimeStamp : 2015/02/10 21:51:57
+FieldStorage(None, None, [MiniFieldStorage('fsearch', 'win2k3')])
+Search Value: win2k3
+win2k3
+Serching for win2k3
+Traceback (most recent call last):
+  File "E:\PyServer\PyServer\Py-Server.py", line 282, in do_POST
+    rows = PDC.getData(str(rValue))
+  File "E:\PyServer\PyServer\PyDBConn.py", line 105, in getData
+    cursor.execute(query)
+Error: ('01000', '[01000] [Microsoft][ODBC SQL Server Driver][DBNETLIB]ConnectionWrite (send()). (10054) (SQLExecDirectW); [08S01] [Microsoft][ODBC SQL Server Driver][DBNETLIB]General network error. Check your network documentation. (11)')
+
+================================
+Requested by : 10.210.9.15
+TimeStamp : 2015/02/10 21:52:56
+FieldStorage(None, None, [MiniFieldStorage('fsearch', 'win2k3')])
+Search Value: win2k3
+win2k3
+Serching for win2k3
+Traceback (most recent call last):
+  File "E:\PyServer\PyServer\Py-Server.py", line 282, in do_POST
+    rows = PDC.getData(str(rValue))
+  File "E:\PyServer\PyServer\PyDBConn.py", line 105, in getData
+    cursor.execute(query)
+Error: ('08S01', '[08S01] [Microsoft][ODBC SQL Server Driver]Communication link failure (0) (SQLExecDirectW)')
+
+================================
+Requested by : 10.210.9.15
+TimeStamp : 2015/02/10 21:53:24
+FieldStorage(None, None, [MiniFieldStorage('fsearch', 'stlwvcprd03')])
+Search Value: stlwvcprd03
+stlwvcprd03
+Serching for stlwvcprd03
+Traceback (most recent call last):
+  File "E:\PyServer\PyServer\Py-Server.py", line 282, in do_POST
+    rows = PDC.getData(str(rValue))
+  File "E:\PyServer\PyServer\PyDBConn.py", line 105, in getData
+    cursor.execute(query)
+Error: ('08S01', '[08S01] [Microsoft][ODBC SQL Server Driver]Communication link failure (0) (SQLExecDirectW)')
+
+================================
+Requested by : 10.210.9.15
+TimeStamp : 2015/02/10 21:53:39
+FieldStorage(None, None, [MiniFieldStorage('fsearch', 'stlwvcprd03')])
+Search Value: stlwvcprd03
+stlwvcprd03
+Serching for stlwvcprd03
+Traceback (most recent call last):
+  File "E:\PyServer\PyServer\Py-Server.py", line 282, in do_POST
+    rows = PDC.getData(str(rValue))
+  File "E:\PyServer\PyServer\PyDBConn.py", line 105, in getData
+    cursor.execute(query)
+Error: ('08S01', '[08S01] [Microsoft][ODBC SQL Server Driver]Communication link failure (0) (SQLExecDirectW)')
+
+================================
+Requested by : 10.210.9.15
+TimeStamp : 2015/02/10 21:54:56
+FieldStorage(None, None, [MiniFieldStorage('fsearch', 'stlwvcprd03')])
+Search Value: stlwvcprd03
+stlwvcprd03
+Serching for stlwvcprd03
+Traceback (most recent call last):
+  File "E:\PyServer\PyServer\Py-Server.py", line 282, in do_POST
+    rows = PDC.getData(str(rValue))
+  File "E:\PyServer\PyServer\PyDBConn.py", line 105, in getData
+    cursor.execute(query)
+Error: ('08S01', '[08S01] [Microsoft][ODBC SQL Server Driver]Communication link failure (0) (SQLExecDirectW)')
+
+================================
+Requested by : 10.208.81.27
+TimeStamp : 2015/02/10 21:57:51
+FieldStorage(None, None, [MiniFieldStorage('fsearch', 'cblinux01')])
+Search Value: cblinux01
+cblinux01
+Serching for cblinux01
+Traceback (most recent call last):
+  File "E:\PyServer\PyServer\Py-Server.py", line 282, in do_POST
+    rows = PDC.getData(str(rValue))
+  File "E:\PyServer\PyServer\PyDBConn.py", line 105, in getData
+    cursor.execute(query)
+Error: ('08S01', '[08S01] [Microsoft][ODBC SQL Server Driver]Communication link failure (0) (SQLExecDirectW)')
+
+================================
+Requested by : 10.208.81.27
+TimeStamp : 2015/02/10 22:08:06
+FieldStorage(None, None, [MiniFieldStorage('fsearch', 'cblinux01')])
+Search Value: cblinux01
+cblinux01
+Serching for cblinux01
+Traceback (most recent call last):
+  File "E:\PyServer\PyServer\Py-Server.py", line 282, in do_POST
+    rows = PDC.getData(str(rValue))
+  File "E:\PyServer\PyServer\PyDBConn.py", line 105, in getData
+    cursor.execute(query)
+Error: ('08S01', '[08S01] [Microsoft][ODBC SQL Server Driver]Communication link failure (0) (SQLExecDirectW)')
+
+================================
+RequestStarted httpserver on port  8084
+================================
+Requested by : 10.208.81.27
+TimeStamp : 2015/02/10 22:15:15
+FieldStorage(None, None, [MiniFieldStorage('fsearch', 'cblinux01')])
+Search Value: cblinux01
+cblinux01
+Serching for cblinux01
+83 CBlinux01 vmware_stpcx20_438_CB 26 0
+83 CBlinux01 vmware_stpcx20_437_CB 26 0
+------------------
+83 CBlinux01 vmware_stpcx20_438_CB 26 0
+83 CBlinux01 vmware_stpcx20_437_CB 26 0
+================================
+Requested by : 10.208.81.27
+TimeStamp : 2015/02/10 22:15:52
+FieldStorage(None, None, [MiniFieldStorage('fsearch', 'win2k3')])
+Search Value: win2k3
+win2k3
+Serching for win2k3
+69 win2k3 vmware_stpcx20_437_CB 26 0
+69 win2k3 vmware_stpcx20_436_CB 26 0
+------------------
+69 win2k3 vmware_stpcx20_437_CB 26 0
+69 win2k3 vmware_stpcx20_436_CB 26 0
+================================
+Requested by : 10.208.81.27
+TimeStamp : 2015/02/10 22:26:30
+FieldStorage(None, None, [MiniFieldStorage('fsearch', 'win2k3')])
+Search Value: win2k3
+win2k3
+Serching for win2k3
+69 win2k3 vmware_stpcx20_437_CB 26 0
+69 win2k3 vmware_stpcx20_436_CB 26 0
+------------------
+69 win2k3 vmware_stpcx20_437_CB 26 0
+69 win2k3 vmware_stpcx20_436_CB 26 0
+================================
+Requested by : 10.210.9.15
+TimeStamp : 2015/02/10 23:43:01
+FieldStorage(None, None, [MiniFieldStorage('fsearch', 'stlwvcprd03')])
+Search Value: stlwvcprd03
+stlwvcprd03
+Serching for stlwvcprd03
+Error
+------------------
+================================
+Requested by : 10.210.9.15
+TimeStamp : 2015/02/10 23:45:06
+FieldStorage(None, None, [MiniFieldStorage('fsearch', 'ap8037esx01')])
+Search Value: ap8037esx01
+ap8037esx01
+Serching for ap8037esx01
+Error
+------------------
+================================
+Requested by : 10.210.9.15
+TimeStamp : 2015/02/10 23:47:47
+FieldStorage(None, None, [MiniFieldStorage('fsearch', 'ap7013esx01')])
+Search Value: ap7013esx01
+ap7013esx01
+Serching for ap7013esx01
+Error
+------------------
+================================
+Requested by : 10.210.9.15
+TimeStamp : 2015/02/10 23:48:01
+FieldStorage(None, None, [MiniFieldStorage('fsearch', 'stluesxss001')])
+Search Value: stluesxss001
+stluesxss001
+Serching for stluesxss001
+Error
+------------------
+================================
+Requested by : 10.210.9.15
+TimeStamp : 2015/02/10 23:48:46
+FieldStorage(None, None, [MiniFieldStorage('fsearch', 'stluesxprd305')])
+Search Value: stluesxprd305
+stluesxprd305
+Serching for stluesxprd305
+Error
+------------------
+================================
+Requested by : 10.210.8.246
+TimeStamp : 2015/02/11 04:54:58
+FieldStorage(None, None, [MiniFieldStorage('fsearch', 'cblinux01')])
+Search Value: cblinux01
+cblinux01
+Serching for cblinux01
+83 CBlinux01 vmware_stpcx20_438_CB 26 0
+83 CBlinux01 vmware_stpcx20_437_CB 26 0
+------------------
+83 CBlinux01 vmware_stpcx20_438_CB 26 0
+83 CBlinux01 vmware_stpcx20_437_CB 26 0
+================================
+Requested by : 10.210.1.49
+TimeStamp : 2015/02/11 08:03:47
+FieldStorage(None, None, [MiniFieldStorage('fsearch', 'cblinux')])
+Search Value: cblinux
+cblinux
+Serching for cblinux
+Error
+------------------
+================================
+Requested by : 10.30.134.174
+TimeStamp : 2015/02/11 08:04:39
+FieldStorage(None, None, [MiniFieldStorage('fsearch', 'win2k3')])
+Search Value: win2k3
+win2k3
+Serching for win2k3
+69 win2k3 vmware_stpcx20_437_CB 26 0
+69 win2k3 vmware_stpcx20_436_CB 26 0
+------------------
+69 win2k3 vmware_stpcx20_437_CB 26 0
+69 win2k3 vmware_stpcx20_436_CB 26 0
+================================
+Requested by : 10.30.134.174
+TimeStamp : 2015/02/11 08:04:54
+FieldStorage(None, None, [MiniFieldStorage('fsearch', 'cblinux01')])
+Search Value: cblinux01
+cblinux01
+Serching for cblinux01
+83 CBlinux01 vmware_stpcx20_438_CB 26 0
+83 CBlinux01 vmware_stpcx20_437_CB 26 0
+------------------
+83 CBlinux01 vmware_stpcx20_438_CB 26 0
+83 CBlinux01 vmware_stpcx20_437_CB 26 0
+================================
+Requested by : 10.30.134.174
+TimeStamp : 2015/02/11 08:05:22
+FieldStorage(None, None, [MiniFieldStorage('fsearch', 'test')])
+Search Value: test
+test
+Serching for test
+Error
+------------------
+================================
+Requested by : 10.30.134.174
+TimeStamp : 2015/02/11 08:05:42
+FieldStorage(None, None, [MiniFieldStorage('fsearch', 'cblinux01')])
+Search Value: cblinux01
+cblinux01
+Serching for cblinux01
+83 CBlinux01 vmware_stpcx20_438_CB 26 0
+83 CBlinux01 vmware_stpcx20_437_CB 26 0
+------------------
+83 CBlinux01 vmware_stpcx20_438_CB 26 0
+83 CBlinux01 vmware_stpcx20_437_CB 26 0
+================================
+Requested by : 10.210.1.49
+TimeStamp : 2015/02/11 08:34:26
+FieldStorage(None, None, [MiniFieldStorage('fsearch', 'win2k3')])
+Search Value: win2k3
+win2k3
+Serching for win2k3
+69 win2k3 vmware_stpcx20_437_CB 26 0
+69 win2k3 vmware_stpcx20_436_CB 26 0
+------------------
+69 win2k3 vmware_stpcx20_437_CB 26 0
+69 win2k3 vmware_stpcx20_436_CB 26 0
+================================
+Requested by : 10.210.8.206
+TimeStamp : 2015/02/11 08:49:17
+FieldStorage(None, None, [MiniFieldStorage('fsearch', 'win2k3')])
+Search Value: win2k3
+win2k3
+Serching for win2k3
+69 win2k3 vmware_stpcx20_437_CB 26 0
+69 win2k3 vmware_stpcx20_436_CB 26 0
+------------------
+69 win2k3 vmware_stpcx20_437_CB 26 0
+69 win2k3 vmware_stpcx20_436_CB 26 0
+================================
+Requested by : 10.210.8.206
+TimeStamp : 2015/02/11 08:51:15
+FieldStorage(None, None, [MiniFieldStorage('fsearch', 'cblinux01,win2k3,nishanth')])
+Search Value: cblinux01,win2k3,nishanth
+cblinux01
+Serching for cblinux01
+83 CBlinux01 vmware_stpcx20_438_CB 26 0
+83 CBlinux01 vmware_stpcx20_437_CB 26 0
+------------------
+83 CBlinux01 vmware_stpcx20_438_CB 26 0
+83 CBlinux01 vmware_stpcx20_437_CB 26 0
+Serching for win2k3
+69 win2k3 vmware_stpcx20_437_CB 26 0
+69 win2k3 vmware_stpcx20_436_CB 26 0
+------------------
+69 win2k3 vmware_stpcx20_437_CB 26 0
+69 win2k3 vmware_stpcx20_436_CB 26 0
+Serching for nishanth
+Error
+------------------
+================================
+Requested by : 10.20.7.105
+TimeStamp : 2015/02/12 08:40:27
+FieldStorage(None, None, [MiniFieldStorage('fsearch', 'drmnfs00')])
+Search Value: drmnfs00
+drmnfs00
+Serching for drmnfs00
+Error
+------------------
+================================
+Requested by : 10.208.81.195
+TimeStamp : 2015/02/12 08:40:36
+FieldStorage(None, None, [MiniFieldStorage('fsearch', 'cblinux01')])
+Search Value: cblinux01
+cblinux01
+Serching for cblinux01
+83 CBlinux01 vmware_stpcx20_438_CB 26 0
+83 CBlinux01 vmware_stpcx20_437_CB 26 0
+------------------
+83 CBlinux01 vmware_stpcx20_438_CB 26 0
+83 CBlinux01 vmware_stpcx20_437_CB 26 0
+================================
+Requested by : 10.20.7.105
+TimeStamp : 2015/02/12 08:40:36
+FieldStorage(None, None, [MiniFieldStorage('fsearch', 'cblinux01')])
+Search Value: cblinux01
+cblinux01
+Serching for cblinux01
+83 CBlinux01 vmware_stpcx20_438_CB 26 0
+83 CBlinux01 vmware_stpcx20_437_CB 26 0
+------------------
+83 CBlinux01 vmware_stpcx20_438_CB 26 0
+83 CBlinux01 vmware_stpcx20_437_CB 26 0
+Started httpserver on port  8084
+================================
+Requested by : 10.210.10.134
+TimeStamp : 2015/02/25 08:39:07
+FieldStorage(None, None, [MiniFieldStorage('fsearch', 'cblinux01')])
+Search Value: cblinux01
+cblinux01
+Serching for cblinux01
+83 CBlinux01 vmware_stpcx20_438_CB 26 0
+83 CBlinux01 vmware_stpcx20_437_CB 26 0
+------------------
+83 CBlinux01 vmware_stpcx20_438_CB 26 0
+83 CBlinux01 vmware_stpcx20_437_CB 26 0
+Started httpserver on port  8084
+================================
+Requested by : 10.210.1.49
+TimeStamp : 2015/03/13 08:46:47
+FieldStorage(None, None, [MiniFieldStorage('fsearch', 'win2k3')])
+Search Value: win2k3
+win2k3
+Serching for win2k3
+69 win2k3 vmware_stpcx20_437_CB 26 0
+69 win2k3 vmware_stpcx20_436_CB 26 0
+------------------
+69 win2k3 vmware_stpcx20_437_CB 26 0
+69 win2k3 vmware_stpcx20_436_CB 26 0
+================================
+Requested by : 10.210.8.221
+TimeStamp : 2015/03/13 08:49:31
+FieldStorage(None, None, [MiniFieldStorage('fsearch', 'abc')])
+Search Value: abc
+abc
+Serching for abc
+Error
+------------------
+================================
+Requested by : 10.210.8.221
+TimeStamp : 2015/03/13 08:49:43
+FieldStorage(None, None, [MiniFieldStorage('fsearch', 'Meuwvcprd01')])
+Search Value: Meuwvcprd01
+Meuwvcprd01
+Serching for Meuwvcprd01
+Error
+------------------
+================================
+Requested by : 10.210.8.221
+TimeStamp : 2015/03/13 08:51:53
+FieldStorage(None, None, [MiniFieldStorage('fsearch', 'win2k3,cblinux01')])
+Search Value: win2k3,cblinux01
+win2k3
+Serching for win2k3
+69 win2k3 vmware_stpcx20_437_CB 26 0
+69 win2k3 vmware_stpcx20_436_CB 26 0
+------------------
+69 win2k3 vmware_stpcx20_437_CB 26 0
+69 win2k3 vmware_stpcx20_436_CB 26 0
+Serching for cblinux01
+83 CBlinux01 vmware_stpcx20_438_CB 26 0
+83 CBlinux01 vmware_stpcx20_437_CB 26 0
+------------------
+83 CBlinux01 vmware_stpcx20_438_CB 26 0
+83 CBlinux01 vmware_stpcx20_437_CB 26 0
+================================
+Requested by : 10.210.10.5
+TimeStamp : 2015/03/15 21:11:44
+FieldStorage(None, None, [MiniFieldStorage('fsearch', 'win2k7')])
+Search Value: win2k7
+win2k7
+Serching for win2k7
+Traceback (most recent call last):
+  File "E:\PyServer\PyServer\Py-Server.py", line 282, in do_POST
+    rValueArr = rValue.split(',')
+  File "E:\PyServer\PyServer\PyDBConn.py", line 105, in getData
+Error: ('01000', '[01000] [Microsoft][ODBC SQL Server Driver][DBNETLIB]ConnectionWrite (send()). (10054) (SQLExecDirectW); [08S01] [Microsoft][ODBC SQL Server Driver][DBNETLIB]General network error. Check your network documentation. (11)')
+
+count221
+221
+Started httpserver on port  8083
+================================
+Requested by : 10.208.95.26
+TimeStamp : 2015/04/06 06:13:56
+FieldStorage(None, None, [MiniFieldStorage('fsearch', 'stpuxa05')])
+Search Value: stpuxa05
+count222
+stpuxa05
+Cascading if else condition No : 1
+Serching for stpuxa05
+------------------
+Cascading if else condition No : 2
+Serching for stpuxa05
+------------------
+Cascading if else condition No : 3
+Serching for stpuxa05
+Query Success
+Query Success
+Query Success
+Query Success
+Query Success
+------------------
+2457 stpuxa05 PR_vmware_stpcx17_1313_ata 703 0
+2457 stpuxa05 PR_vmware_stpcx17_1377_ata 703 0
+2457 stpuxa05 PR_vmware_stpcx20_104 703 0
+2457 stpuxa05 PR_vmware_stpcx20_133 703 0
+2457 stpuxa05 PR_vmware_stpcx17_2139_data 703 0
+================================
+Requested by : 10.210.8.221
+TimeStamp : 2015/04/06 06:15:13
+FieldStorage(None, None, [MiniFieldStorage('fsearch', 'stluaddmprd03')])
+Search Value: stluaddmprd03
+count223
+stluaddmprd03
+Cascading if else condition No : 1
+Serching for stluaddmprd03
+------------------
+Cascading if else condition No : 2
+Serching for stluaddmprd03
+------------------
+Cascading if else condition No : 3
+Serching for stluaddmprd03
+Query Success
+------------------
+2486 stluaddmprd03 NFS_prd_vm_linux64_data02 709 0
+================================
+Requested by : 10.210.8.221
+TimeStamp : 2015/04/06 06:18:39
+FieldStorage(None, None, [MiniFieldStorage('fsearch', 'stluaddmprd04')])
+Search Value: stluaddmprd04
+count224
+stluaddmprd04
+Cascading if else condition No : 1
+Serching for stluaddmprd04
+------------------
+Cascading if else condition No : 2
+Serching for stluaddmprd04
+------------------
+Cascading if else condition No : 3
+Serching for stluaddmprd04
+Query Success
+------------------
+2360 stluaddmprd04 NFS_prd_vm_linux64_data02 709 0
+================================
+Requested by : 10.210.8.221
+TimeStamp : 2015/04/06 06:19:40
+FieldStorage(None, None, [MiniFieldStorage('fsearch', 'na1000arsprd14')])
+Search Value: na1000arsprd14
+count225
+na1000arsprd14
+Cascading if else condition No : 1
+Serching for na1000arsprd14
+------------------
+Cascading if else condition No : 2
+Serching for na1000arsprd14
+------------------
+Cascading if else condition No : 3
+Serching for na1000arsprd14
+Query Success
+Query Success
+Query Success
+Query Success
+Query Success
+Query Success
+Query Success
+Query Success
+Query Success
+------------------
+169091 na1000arsprd14 NFS_prd_vm_win2k332_data01 709 0
+169091 na1000arsprd14 PR_vmware_stpcx17_0603 709 0
+169091 na1000arsprd14 PR_vmware_stpcx17_1213_ata 709 0
+169091 na1000arsprd14 PR_vmware_stpcx17_1322_ata 709 0
+169091 na1000arsprd14 PR_vmware_stpcx17_1370_ata 709 0
+169091 na1000arsprd14 PR_vmware_stpcx20_107 709 0
+169091 na1000arsprd14 PR_vmware_stpcx20_129 709 0
+169091 na1000arsprd14 PR_vmware_stpcx20_130 709 0
+169091 na1000arsprd14 PR_vmware_stpcx20_136 709 0
+================================
+Requested by : 10.210.8.221
+TimeStamp : 2015/04/06 06:20:12
+FieldStorage(None, None, [MiniFieldStorage('fsearch', 'NA1000ARS02')])
+Search Value: NA1000ARS02
+count226
+NA1000ARS02
+Cascading if else condition No : 1
+Serching for NA1000ARS02
+------------------
+Cascading if else condition No : 2
+Serching for NA1000ARS02
+------------------
+Cascading if else condition No : 3
+Serching for NA1000ARS02
+Query Success
+Query Success
+------------------
+2640 NA1000ARS02 NFS_prd_vm_win2k832_data01 703 0
+2640 NA1000ARS02 NFS_dev_vm_w2k364_data101a 703 0
+================================
+Requested by : 10.210.8.221
+TimeStamp : 2015/04/06 06:20:39
+FieldStorage(None, None, [MiniFieldStorage('fsearch', 'stlwrfsprd01')])
+Search Value: stlwrfsprd01
+count227
+stlwrfsprd01
+Cascading if else condition No : 1
+Serching for stlwrfsprd01
+------------------
+Cascading if else condition No : 2
+Serching for stlwrfsprd01
+------------------
+Cascading if else condition No : 3
+Serching for stlwrfsprd01
+Query Success
+Query Success
+Query Success
+------------------
+204485 stlwrfsprd01 NFS_prd_vm_win2k332_data02 709 0
+204485 stlwrfsprd01 NFS_prd_vm_win2k832_data02 709 0
+204485 stlwrfsprd01 sql_stpcx17_0170_backup1 709 0
+================================
+Requested by : 10.210.8.221
+TimeStamp : 2015/04/06 06:21:06
+FieldStorage(None, None, [MiniFieldStorage('fsearch', 'na1000ars12')])
+Search Value: na1000ars12
+count228
+na1000ars12
+Cascading if else condition No : 1
+Serching for na1000ars12
+------------------
+Cascading if else condition No : 2
+Serching for na1000ars12
+------------------
+Cascading if else condition No : 3
+Serching for na1000ars12
+Query Success
+Query Success
+Query Success
+Query Success
+Query Success
+------------------
+2732 na1000ars12 NFS_prd_vm_win2k864_data02 703 0
+2732 na1000ars12 PR_vmware_stpcx17_1173_ata 703 0
+2732 na1000ars12 PR_vmware_stpcx17_1521 703 0
+2732 na1000ars12 PR_vmware_stpcx17_1522 703 0
+2732 na1000ars12 pr_vmware_stpcx20_2181_data 703 0
+================================
+Requested by : 10.210.8.221
+TimeStamp : 2015/04/06 06:21:31
+FieldStorage(None, None, [MiniFieldStorage('fsearch', 'NA1000MSSPRD01')])
+Search Value: NA1000MSSPRD01
+count229
+NA1000MSSPRD01
+Cascading if else condition No : 1
+Serching for NA1000MSSPRD01
+------------------
+Cascading if else condition No : 2
+Serching for NA1000MSSPRD01
+------------------
+Cascading if else condition No : 3
+Serching for NA1000MSSPRD01
+Query Success
+Query Success
+Query Success
+Query Success
+Query Success
+Query Success
+Query Success
+------------------
+207421 NA1000MSSPRD01 NFS_prd_vm_win2k864_data02 703 0
+207421 NA1000MSSPRD01 NFS_prd_vm_win2k832_data01 703 0
+207421 NA1000MSSPRD01 PR_vmware_stpcx17_0165_ata 703 0
+207421 NA1000MSSPRD01 sql_stpcx17_0367_backup12_ata 703 0
+207421 NA1000MSSPRD01 PR_vmware_stpcx17_1211_ata 703 0
+207421 NA1000MSSPRD01 PR_vmware_stpcx19_0716_ata 703 0
+207421 NA1000MSSPRD01 PR_vmware_stpcx17_2251_vm_gis_data 703 0

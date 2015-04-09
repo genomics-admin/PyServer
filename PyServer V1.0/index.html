@@ -1,0 +1,163 @@
+<html>
+<head>
+<title>Monsanto: VM Search Page</title>
+<link rel="stylesheet" type="text/css" media="screen" href="layout.css">
+<style>
+table, td, th {
+    border: 1px solid black;
+}
+
+th {
+    background-color: green;
+    color: white;
+	text-align: middle;
+	height: 50px;
+}
+</style>
+</head>
+<body>
+<div class="wrapper">
+
+<div style="text-align: center;"><a href="http://www.monsanto.com" title="Monsanto logo" style="margin-top:2px;margin-right:2px;margin-bottom:2px;margin-left:2px;" rel="" target="_blank"><img src="http://www.monsanto.com/SharedMonsantoLogos/media-kit/monsanto.png" alt="Monsanto Logo" style="border: 7px solid rgb(255, 255, 255); -webkit-box-shadow: rgba(0, 0, 0, 0.498039) 0px 15px 10px -10px, rgba(0, 0, 0, 0.298039) 0px 1px 4px; box-shadow: rgba(0, 0, 0, 0.498039) 0px 15px 10px -10px, rgba(0, 0, 0, 0.298039) 0px 1px 4px; border-top-left-radius: 7px; border-top-right-radius: 7px; border-bottom-right-radius: 7px; border-bottom-left-radius: 7px; float: none; margin: 2px; width: 600px; height: 201px;" /></a></div>
+<div><br />
+	</div>
+<form method="POST" action="/send" style="text-align: center;" id="clickMeId">  Search: 
+	<input type="text" name="fsearch" id="clickMeId1"/>  
+<input type="submit" value="Search" onclick="toggleDisplay('loading', 'clickMeId')"/>
+</form>
+<img id="loading" src="http://bradsknutson.com/wp-content/uploads/2013/04/page-loader.gif" style="display:none;" alt="Please Wait..." height="40" width="40" align="right"/>
+<div>&nbsp;</div>
+
+<script>
+function toggleDisplay (toBlock, toNone) {
+    document.getElementById(toBlock).style.display = 'block';
+    document.getElementById(toNone).style.display = 'none';
+}
+</script>
+
+<div><span style="font-weight: bold;">&nbsp;Data Grid:</span></div>
+<div>
+	<table style="border-collapse:collapse;width:100%;">
+		<tbody>
+			<tr>
+				<th>VCNAME</th>
+                                <th>VMID</th>
+                                <th>NAME</th>
+                                <th>DATASTORE_NAME</th>
+                                <th>CAPACITYGB</th>
+                                <th>FREEGB</th>
+                                <th>VMGROUPID</th>
+                                <th>ESH_HOSTNAME</th>
+                                <th>CONFIGFILENAME</th>
+                                <th>VMUNIQUEID</th>
+                                <th>RESOURCE_GROUP_ID</th>
+                                <th>MEM_SIZE_MB</th>
+                                <th>NUM_VCPU</th>
+                                <th>BOOTTIME</th>
+                                <th>POWER_STATE</th>
+                                <th>CLUSTER_NAME</th>
+                                <th>VDATACENTER</th>
+                                <th>GUESTOS</th>
+                                <th>GUEST_STATE</th>
+                                <th>MEM_RESV</th>
+                                <th>MEM_OVHD</th>
+                                <th>CPU_RESERVATION</th>
+                                <th>DNS_NAME</th>
+                                <th>IP_ADDRESS</th>
+                                <th>VMMWARE_TOOL</th>
+                                <th>TOOLS_VERSION</th>
+                                <th>NUM_NIC</th>
+                                <th>NUM_DISK</th>
+                                <th>TEMPLATE</th>
+                                <th>DESCRIPTION</th>
+                                <th>ANNOTATION</th>
+                                <th>AGG_COMMDISKMB</th>
+                                <th>AGG_UNCOMMDISKMB</th>
+                                <th>AGG_UNSHARDISKMB</th>
+                                <th>STORUPDTIME</th>
+			</tr>
+			<tr>
+				<td><br />
+					</td>
+				<td><br />
+					</td>
+				<td><br />
+					</td>
+				<td><br />
+					</td>
+				<td><br />
+					</td>
+				<td><br />
+					</td>
+				<td><br />
+					</td>
+				<td><br />
+					</td>
+				<td><br />
+					</td>
+				<td><br />
+					</td>
+				<td><br />
+					</td>
+				<td><br />
+					</td>
+				<td><br />
+					</td>
+				<td><br />
+					</td>
+				<td><br />
+					</td>
+				<td><br />
+					</td>
+				<td><br />
+					</td>
+				<td><br />
+					</td>
+				<td><br />
+					</td>
+				<td><br />
+					</td>
+				<td><br />
+					</td>
+				<td><br />
+					</td>
+				<td><br />
+					</td>
+				<td><br />
+					</td>
+				<td><br />
+					</td>
+				<td><br />
+					</td>
+				<td><br />
+					</td>
+				<td><br />
+					</td>
+				<td><br />
+					</td>
+				<td><br />
+					</td>
+				<td><br />
+					</td>
+				<td><br />
+					</td>
+				<td><br />
+					</td>
+				<td><br />
+					</td>
+				<td><br />
+					</td>
+			</tr>
+		</tbody>
+	</table><br />
+	</div>
+
+	<div class="push"></div>
+
+	</div>
+
+	<div class="footer">
+		<p class="copyright"><a href="http://www.monsanto.com/" title="Owner">Copyright &copy; Monsanto &mdash; <a href="http://mysites.monsanto.com/Person.aspx?accountname=ASIA%2DPACIFIC%5CSLAIK" title="Developer">Developed by: Sandeep kumar Laik</a> and <a href="http://mysites.monsanto.com/Person.aspx?accountname=ASIA%2DPACIFIC%5CSSKUMA5" title="Designer">Designed by: Santhosh Kumar N</a></p>
+	</div>
+	</body>
+</html>
